@@ -47,11 +47,11 @@ public void continuebutton() {
 
 public void creataccount() {
 	
-	driver.findElement(FirstName).sendKeys("rimi");
+	driver.findElement(FirstName).sendKeys("rimi kumar");
 	driver.findElement(LastName).sendKeys("singh");
 	driver.findElement(Email).sendKeys(Finalstring);
 	driver.findElement(Telephone).sendKeys("08265862998");
-	driver.findElement(Company).sendKeys("Srijan Technology Delhi");
+	driver.findElement(Company).sendKeys("Srijan Technology Delhi India");
 	driver.findElement(Company).sendKeys("Shastri Nagar");
 	driver.findElement(Address1).sendKeys("Srijan Technologies");
 	driver.findElement(City).sendKeys("Ghazibad");
