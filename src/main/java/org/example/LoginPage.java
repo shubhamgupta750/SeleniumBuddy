@@ -47,8 +47,8 @@ public void continuebutton() {
 
 public void creataccount() {
 	
-	driver.findElement(FirstName).sendKeys("ram");
-	driver.findElement(LastName).sendKeys("Gupta");
+	driver.findElement(FirstName).sendKeys("rimi");
+	driver.findElement(LastName).sendKeys("singh");
 	driver.findElement(Email).sendKeys(Finalstring);
 	driver.findElement(Telephone).sendKeys("08265862998");
 	driver.findElement(Company).sendKeys("Srijan Technology Delhi");

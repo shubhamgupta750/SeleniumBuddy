@@ -9,7 +9,7 @@ public class LoginJourneyTest extends BaseTest {
 	LoginPage text=new LoginPage(driver);
 		 text.Loginclicks();
 		 text.continuebutton();
-		 Thread.sleep(2000);
+		 Thread.sleep(4000);
 		 text.creataccount(); 
 		String successMessage = text.getSuccessText(); 
 		Assert.assertEquals(successMessage, "Congratulations! Your new account has been successfully created!");
