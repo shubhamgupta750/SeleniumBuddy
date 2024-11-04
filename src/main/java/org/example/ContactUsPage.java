@@ -11,6 +11,7 @@ public class ContactUsPage {
 
     // Locators
     By heading = By.tagName("h1");
+    By contactUsLink = By.linkText("Contact Us");
 
     // Methods
     public String getHeadingText() {
@@ -19,5 +20,8 @@ public class ContactUsPage {
 
     public String getContactUsPageTitle() {
         return driver.getTitle();
+    }
+    public void clickOnContactUs(){
+        driver.findElement(contactUsLink).click();
     }
 }
