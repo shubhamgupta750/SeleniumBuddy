@@ -8,15 +8,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
 
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+
 public class BaseTest {
     WebDriver driver;
+
     public ExtentReports extent;
     public ExtentTest test;
+
     public static void flushDirectory(String dirPath) {
         Path directory = Paths.get(dirPath);
 
@@ -51,16 +55,13 @@ public class BaseTest {
     }
 
 
-
-
-
     @BeforeMethod
     public void setUp() {
 
         WebDriverManager.chromedriver().setup();
         // Create an instance of ChromeDriver
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");// For opening the browser in headless mode
+       // options.addArguments("--headless");// For opening the browser in headless mode
         options.addArguments("--disable-gpu"); // Optional, for specific configurations
         driver = new ChromeDriver(options);
 
