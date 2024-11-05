@@ -50,17 +50,13 @@ public class BaseTest {
 
     }
 
-
-
-
-
     @BeforeMethod
     public void setUp() {
 
         WebDriverManager.chromedriver().setup();
         // Create an instance of ChromeDriver
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");// For opening the browser in headless mode
+        //options.addArguments("--headless");// For opening the browser in headless mode
         options.addArguments("--disable-gpu"); // Optional, for specific configurations
         driver = new ChromeDriver(options);
 
@@ -71,7 +67,7 @@ public class BaseTest {
         driver.get("https://automationteststore.com/");
     }
 
-    @AfterMethod
+   @AfterMethod
     public void tearDown() {
         if (driver != null) {
             driver.quit();
