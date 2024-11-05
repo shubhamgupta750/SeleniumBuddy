@@ -68,7 +68,10 @@ public class BaseTest {
         driver.manage().window().maximize();
 
         // Example: Navigating to a URL
-        driver.get("https://automationteststore.com/");
+        //driver.get("https://automationteststore.com/");
+
+        //opening contact us page
+        driver.get("https://automationteststore.com/index.php?rt=content/contact");
     }
 
     @AfterMethod
