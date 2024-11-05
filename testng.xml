@@ -14,8 +14,11 @@
                 <methods>
                     <include name="verifyHomePageTitle"/>
                     <include name="navigateToContactUsPage"/>
+                   
                 </methods>
             </class>
+             
+            
         </classes>
     </test>
 </suite>
