@@ -21,4 +21,8 @@ public class HomePage {
         return driver.getTitle();
     }
 
+    public void clickContactUs() {
+        driver.findElement(contactUsLink).click();
+    }
+
 }

@@ -11,8 +11,14 @@ public class ContactUsPage {
 
     // Locators
     By heading = By.tagName("h1");
+//    By contactUs = By.xpath("ul[@name='info_links_footer']/li[4]");
 
     // Methods
+
+//    public void clickOnContactUsButton() {
+//        driver.findElement(contactUs).click();
+//    }
+
     public String getHeadingText() {
         return driver.findElement(heading).getText();
     }
