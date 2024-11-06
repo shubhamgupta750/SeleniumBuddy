@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="All Test Suite" parallel="tests" thread-count="5">
 
-    <test verbose="2" preserve-order="true" name="/Users/shubham.gupta/Desktop/SeleniumBuddy">
-        <classes>
-            <class name="org.example.ContactUsPageTest">
-                <methods>
-                    <include name="verifyContactUsPageTitle"/>
-                    <include name="verifyHeadingText"/>
-                </methods>
-            </class>
-            <class name="org.example.HomePageTest">
-                <methods>
-                    <include name="verifyHomePageTitle"/>
-                    <include name="navigateToContactUsPage"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+	<!-- Test for Chrome -->
+	<test thread-count="5" name="ChromeTest">
+			<parameter name="browser" value="chrome" ></parameter>
+			<classes>
+				<class name="org.example.CrossBrowserTestingScript" />
+				 
+			</classes>
+		</test>
+
+		<!-- Test for Firefox -->
+		<test thread-count="5" name="FirefoxTest">
+			<parameter name="browser" value="firefox" ></parameter>
+			<classes>
+				<class name="org.example.CrossBrowserTestingScript" />
+			</classes>
+		</test>
+		
+		<!-- Test for edge -->
+		<test thread-count="5" name="EdgeTest">
+			<parameter name="browser" value="edge" ></parameter>
+			<classes>
+				<class name="org.example.CrossBrowserTestingScript" />
+			</classes>
+		</test>
 </suite>
