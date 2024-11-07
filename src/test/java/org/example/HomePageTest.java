@@ -10,6 +10,7 @@ public class HomePageTest extends BaseTest {
         String title = homePage.getHomePageTitle();
         System.out.println(title);
         Assert.assertEquals(title, "A place to practice your automation skills!");
+
     }
 
     @Test

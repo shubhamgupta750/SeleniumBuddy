@@ -5,7 +5,8 @@ public class HomePage {
     WebDriver driver;
 
     // Constructor
-    public HomePage(WebDriver driver) {
+    public HomePage(WebDriver driver)
+    {
         this.driver = driver;
     }
 
@@ -13,7 +14,8 @@ public class HomePage {
     By contactUsLink = By.xpath("//h2[normalize-space()='Contact Us']");
 
     // Methods
-    public void displayContactUs() {
+    public void displayContactUs()
+    {
         driver.findElement(contactUsLink).isDisplayed();
     }
 
