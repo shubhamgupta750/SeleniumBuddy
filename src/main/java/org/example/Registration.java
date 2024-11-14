@@ -46,7 +46,7 @@ public class Registration {
         driver.findElement(firstname).sendKeys("abc");
         driver.findElement(Lastname).sendKeys("asd");
 
-        driver.findElement(Email).sendKeys("ab142578@testmail.com");
+        driver.findElement(Email).sendKeys("ab19578@testmail.com");
 
        // driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
         driver.findElement(Telephone).sendKeys("1234567");
@@ -56,7 +56,7 @@ public class Registration {
         regionElement.selectByVisibleText("Bristol");
         driver.findElement(Zipcode).sendKeys("123456");
 
-        driver.findElement(loginname).sendKeys("12qwerty");
+        driver.findElement(loginname).sendKeys("123qwerty");
 
        // driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
         driver.findElement(Password).sendKeys("123456");
