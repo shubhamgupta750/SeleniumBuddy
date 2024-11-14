@@ -2,6 +2,8 @@ package org.example;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.concurrent.TimeUnit;
@@ -38,11 +40,13 @@ public class Registration {
     public void registationform() {
         driver.findElement(clickonlogin).click();
         driver.findElement(clickoncontinue).click();
+
       //  driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+
         driver.findElement(firstname).sendKeys("abc");
         driver.findElement(Lastname).sendKeys("asd");
 
-        driver.findElement(Email).sendKeys("abcd7691@testmail.com");
+        driver.findElement(Email).sendKeys("ab142578@testmail.com");
 
        // driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
         driver.findElement(Telephone).sendKeys("1234567");
@@ -52,7 +56,7 @@ public class Registration {
         regionElement.selectByVisibleText("Bristol");
         driver.findElement(Zipcode).sendKeys("123456");
 
-        driver.findElement(loginname).sendKeys("qwerty96108");
+        driver.findElement(loginname).sendKeys("12qwerty");
 
        // driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
         driver.findElement(Password).sendKeys("123456");
@@ -77,17 +81,19 @@ public class Registration {
         }
 
     //logout
-        By accountclick = By.xpath("(//span[contains(@class,'menu_text')][normalize-space()='Account'])[1]");
-        By logoutclick = By.cssSelector("li[class='dropdown'] a[class='sub menu_logout'] span[class='menu_text']");
+       By accountclick = By.xpath("(//span[contains(@class,'menu_text')][normalize-space()='Account'])[1]");
+        By logoutclick = By.xpath("(//span[text()=\"Logout\"])[1]");
+            public void logout() {
+         WebElement account= driver.findElement(accountclick);
+           Actions action = new Actions(driver);
+           //mousehover action
+                action.moveToElement(account).perform();
+            driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
 
-public void logout() {
-    driver.findElement(accountclick).click();
-    driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
+            driver.findElement(logoutclick).click();
 
-    driver.findElement(logoutclick).click();
-
-    String pagetitle = driver.getTitle();
-    System.out.println(pagetitle);
+            String pagetitle = driver.getTitle();
+            System.out.println(pagetitle);
 }
 }
 

@@ -10,6 +10,9 @@ public class RegistrationTest extends BaseTest {
       //  Registration.altermessage();
         Registration.logout();
 
+
+
+
     }
 
 }
